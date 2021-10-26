@@ -140,11 +140,15 @@ function init() {
 	const iconElm = document.createElement('link');
 	iconElm.rel = "icon";
 	iconElm.href = DVD.randomColorLogo();
+
+	const EmbedIcon = document.createElement('meta');
+	EmbedIcon.property = "og:image";
+	EmbedIcon.content = DVD.randomColorLogo();
+	console.log(DVD.randomColorLogo())
 	DVD.newColor();
 	document.head.appendChild(iconElm);
 	draw()
 }
-
 window.onresize = () => {
 	canvas.height = innerHeight;
 	canvas.width = innerWidth;
